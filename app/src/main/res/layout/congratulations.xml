@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55c668">
+
+    <View
+        android:id="@+id/whiteRectangle"
+        android:layout_width="338dp"
+        android:layout_height="418dp"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="163dp" />
+    <TextView
+        android:id="@+id/congratsMessage"
+        android:layout_width="278dp"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="Congratulations!"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <TextView
+        android:id="@+id/bookingInfo"
+        android:layout_width="308dp"
+        android:layout_height="132dp"
+        android:text="     Your lesson with Professor [name] has been successfully booked! Make sure to note down the date and time - it's set for [Date] at [Time].\n   Set a reminder so you don't miss it."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <Button
+        android:id="@+id/chatButton"
+        android:layout_width="282dp"
+        android:layout_height="56dp"
+        android:text="Chat with teacher"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="426dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:text="Back"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="498dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
