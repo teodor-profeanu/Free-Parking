@@ -8,21 +8,16 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.polihi.FirstFragment"
-        android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first" >
-
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.polihi.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second" >
-
+        android:id="@+id/feedFragment"
+        android:name="com.example.polihi.FeedFragment">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_feedFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
