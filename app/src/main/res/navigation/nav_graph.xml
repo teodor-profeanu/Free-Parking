@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/feedFragment"
@@ -20,4 +23,7 @@
             android:id="@+id/action_feedFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.polihi.LoginFragment"/>
 </navigation>

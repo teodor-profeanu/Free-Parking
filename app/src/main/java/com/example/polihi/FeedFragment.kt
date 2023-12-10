@@ -25,7 +25,14 @@ class FeedFragment : Fragment() {
 
         val listView = binding.lessonsListView
         val items = ArrayList<ListItem>()
-        items.add(ListItem(R.drawable.thumb2, "English Language Learning", "Trying to learn english?...\nby Anthony Antwood", ""))
+        items.add(
+            ListItem(
+                R.drawable.thumb2,
+                "English Language Learning",
+                "Trying to learn english?...\nby Anthony Antwood",
+                ""
+            )
+        )
         val adapter = CustomAdapter(requireContext(), items)
         listView.adapter = adapter
 

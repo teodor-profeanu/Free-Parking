@@ -35,6 +35,10 @@ private var _binding: FragmentFirstBinding? = null
             findNavController().navigate(R.id.action_FirstFragment_to_feedFragment)
         }
 
+        binding.userButton.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_loginFragment)
+        }
+
         val listView = binding.lessonsListView
         val items = ArrayList<ListItem>()
         items.add(ListItem(R.drawable.thumb1, "Language Basics - How to learn Them", "An in depth look at how...\nby Romi Stas", "$"))

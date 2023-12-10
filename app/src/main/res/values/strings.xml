@@ -47,4 +47,5 @@
     <string name="search">Search</string>
     <string name="lessons">Lessons</string>
     <string name="featured">Featured</string>
+    <string name="login">Login</string>
 </resources>
