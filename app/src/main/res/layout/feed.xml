@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/lessons"
+            android:text="@string/feed"
             android:textSize="32sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:text="@string/featured"
+            android:text="Featured"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="@+id/searchEditText"
             app:layout_constraintTop_toBottomOf="@+id/searchEditText" />

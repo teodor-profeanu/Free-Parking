@@ -1,15 +1,17 @@
 package com.example.polihi
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.example.polihi.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +34,16 @@ private lateinit var binding: ActivityMainBinding
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+        val listView = findViewById<ListView>(R.id.lessonsListView)
+        val items = ArrayList<ListItem>()
+        items.add(ListItem(R.drawable.thumb1, "Language Basics - How to learn Them", "An in depth look at how\n...", "$"))
+        items.add(ListItem(R.drawable.thumb2, "English Language Learning", "Trying to learn english?\n...", ""))
+// Add more items...
+
+// Add more items...
+        val adapter = CustomAdapter(this, items)
+        listView.adapter = adapter
     }
 override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
