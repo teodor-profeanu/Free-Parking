@@ -43,52 +43,24 @@
             android:id="@+id/filterButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort by"
+            android:text=""
             android:background="@android:color/transparent"
             android:textColor="@color/accent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Search Bar -->
-        <EditText
-            android:id="@+id/searchEditText"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:hint="@string/search"
-            android:drawableRight="@drawable/search"
-            android:padding="10dp"
-            android:singleLine="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/backButton" />
-
-        <!-- List of Lessons -->
-
-        <!-- Bottom Navigation Bar -->
-
-        <TextView
-            android:id="@+id/lessonsHeader2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:text="Featured"
-            android:textSize="28sp"
-            app:layout_constraintStart_toStartOf="@+id/searchEditText"
-            app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
-
         <ListView
             android:id="@+id/lessonsListView"
             android:layout_width="374dp"
             android:layout_height="495dp"
+            android:layout_marginBottom="16dp"
             android:divider="@android:color/transparent"
             android:dividerHeight="10dp"
             app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintHorizontal_bias="0.135"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lessonsHeader2" />
+            app:layout_constraintTop_toBottomOf="@+id/lessonsHeader" />
 
         <LinearLayout
             android:id="@+id/bottom_navigation"
@@ -114,7 +86,7 @@
                     android:id="@+id/lessonsButton"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/lesson_active"
+                    android:src="@drawable/lesson"
                     android:scaleType="centerInside"
                     android:padding="0dp"
                     android:background="@color/light"
@@ -123,7 +95,7 @@
                     android:id="@+id/feedButton"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/feed"
+                    android:src="@drawable/feed_active"
                     android:scaleType="centerInside"
                     android:padding="0dp"
                     android:background="@color/light"
