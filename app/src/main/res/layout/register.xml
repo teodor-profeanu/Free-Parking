@@ -50,11 +50,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/nameField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:hint="Email"
+            android:layout_marginTop="70dp"
+            android:hint="Name"
             android:padding="12dp"
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,20 +62,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/logoutButton"
+        <EditText
+            android:id="@+id/usernameField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_rectangle"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:hint="Username"
+            android:padding="12dp"
+            android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/usernameEditText"
-            android:layout_marginTop="64dp" />
+            android:inputType="textPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameField" />
 
         <EditText
-            android:id="@+id/usernameEditText"
+            android:id="@+id/emailField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Email"
+            android:padding="12dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/usernameField" />
+
+        <EditText
+            android:id="@+id/passwordField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -83,9 +99,76 @@
             android:padding="12dp"
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+            app:layout_constraintTop_toBottomOf="@id/emailField" />
+
+        <EditText
+            android:id="@+id/confPasswordField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Confirm Password"
+            android:padding="12dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordField" />
+
+        <TextView
+            android:id="@+id/fromCountriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Country of origin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confPasswordField" />
+
+        <Spinner
+            android:id="@+id/fromCountrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fromCountriesText" />
+
+        <TextView
+            android:id="@+id/toCountriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Country where you live"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fromCountrySpinner" />
+
+        <Spinner
+            android:id="@+id/toCountrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toCountriesText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_rectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toCountrySpinner"
+            android:layout_marginTop="32dp" />
 
         <LinearLayout
             android:id="@+id/bottom_navigation"
@@ -101,29 +184,15 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/forgotPasswordTextView"
+            android:id="@+id/loginView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot password"
+            android:text="Already have an account? Login here!"
             android:textColor="@color/accent"
             android:clickable="true"
             android:focusable="true"
+            android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/logoutButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            android:layout_marginTop="32dp" />
-
-        <!-- Register TextView -->
-        <TextView
-            android:id="@+id/registerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account? Register here!"
-            android:textColor="@color/accent"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

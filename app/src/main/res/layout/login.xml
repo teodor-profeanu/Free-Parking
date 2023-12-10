@@ -54,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="160dp"
-            android:hint="Email"
+            android:hint="Username or Email"
             android:padding="12dp"
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +81,7 @@
             android:layout_marginTop="32dp"
             android:hint="Password"
             android:padding="12dp"
+            android:inputType="textPassword"
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -112,6 +113,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            android:textSize="16sp"
             android:layout_marginTop="32dp" />
 
         <!-- Register TextView -->
@@ -122,6 +124,7 @@
             android:text="Don't have an account? Register here!"
             android:textColor="@color/accent"
             android:clickable="true"
+            android:textSize="16sp"
             android:focusable="true"
             app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView"
             app:layout_constraintStart_toStartOf="parent"

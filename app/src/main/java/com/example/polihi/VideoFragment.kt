@@ -6,22 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.polihi.databinding.LoginBinding
+import com.example.polihi.databinding.VideoBinding
 
-class LoginFragment : Fragment() {
-    private var _binding:LoginBinding? = null
+class VideoFragment : Fragment() {
+    private var _binding:VideoBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = LoginBinding.inflate(inflater, container, false)
+        _binding = VideoBinding.inflate(inflater, container, false)
 
-        binding.registerTextView.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-        }
-        binding.logoutButton.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_FirstFragment)
+        binding.buyButton.setOnClickListener {
+            findNavController().navigate(R.id.action_videoFragment2_to_loginFragment)
         }
 
         return binding.root
@@ -37,3 +34,4 @@ class LoginFragment : Fragment() {
     }
 
 }
+
