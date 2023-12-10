@@ -47,4 +47,18 @@
     <string name="search">Search</string>
     <string name="lessons">Lessons</string>
     <string name="featured">Featured</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string-array name="countries_array">
+        <item>Romania</item>
+        <item>Ukraine</item>
+        <item>Italy</item>
+        <item>Spain</item>
+        <item>Germany</item>
+        <item>China</item>
+        <item>Turkey</item>
+        <item>Syria</item>
+        <item>India</item>
+        <item>United States</item>
+    </string-array>
 </resources>
